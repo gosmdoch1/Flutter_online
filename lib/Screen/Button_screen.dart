@@ -12,6 +12,7 @@ import 'package:online_smwu_again/Screen/ListView/List_view_screen.dart';
 import 'package:online_smwu_again/Screen/ListView/Listview_builder_screen.dart';
 import 'package:online_smwu_again/Screen/ListView/Listview_practice.dart';
 import 'package:online_smwu_again/Screen/Network/Network_screen.dart';
+import 'package:online_smwu_again/Screen/Pageview/page_view_screen.dart';
 import 'package:online_smwu_again/Screen/Row/Row_practice_screen.dart';
 import 'package:online_smwu_again/Screen/Row/Row_screen.dart';
 import 'package:online_smwu_again/Screen/Stack/Stack_practice_screen.dart';
@@ -20,6 +21,12 @@ import 'package:online_smwu_again/Screen/Stateful/Stateful_screen.dart';
 import 'package:online_smwu_again/Screen/Stateless/Stateless_screen.dart';
 import 'package:online_smwu_again/Screen/Text_form_field/Text_form_field_screen.dart';
 import 'package:online_smwu_again/Screen/Todo/Todo_screen.dart';
+import 'package:online_smwu_again/Screen/bottom_sheet/bottom_sheet_screen.dart';
+import 'package:online_smwu_again/Screen/default_tab_controller/default_tab_controller_screen.dart';
+import 'package:online_smwu_again/Screen/dialog/dialog_screen.dart';
+import 'package:online_smwu_again/Screen/state_management/state_management_screen.dart';
+import 'package:online_smwu_again/Screen/tabbar/tab_bar_screen.dart';
+import 'package:online_smwu_again/Screen/ui_exam.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -252,7 +259,91 @@ class ButtonScreen extends StatelessWidget {
                       },
                     ));
                   },
-                  child: Text("Network"))
+                  child: Text("Network")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return PageViewScreen();
+                      },
+                    ));
+                  },
+                  child: Text("PageView")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TabBarScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Tab Bar")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return DefaultTabControllerScreen();
+                      },
+                    ));
+                  },
+                  child: Text("DefaultTabController")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return DialogScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Dialog")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return BottomSheetScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Bottom Sheet")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return StateManagementScreen();
+                      },
+                    ));
+                  },
+                  child: Text("State Management")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return UiExam();
+                      },
+                    ));
+                  },
+                  child: Text("UI exam"))
             ],
           ),
         ),
