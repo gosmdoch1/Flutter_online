@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:online_smwu_again/Screen/Assignment/ColumnRow_hard_screen.dart';
 import 'package:online_smwu_again/Screen/Assignment/Todo_list.dart';
-import 'package:online_smwu_again/Screen/Checbox_screen/Checkbox_screen.dart';
 import 'package:online_smwu_again/Screen/Click/Click_screen.dart';
 import 'package:online_smwu_again/Screen/Column_practice_screen.dart';
 import 'package:online_smwu_again/Screen/Column_screen.dart';
@@ -25,9 +24,14 @@ import 'package:online_smwu_again/Screen/bottom_sheet/bottom_sheet_screen.dart';
 import 'package:online_smwu_again/Screen/commerce/navigation/navigation_screen.dart';
 import 'package:online_smwu_again/Screen/default_tab_controller/default_tab_controller_screen.dart';
 import 'package:online_smwu_again/Screen/dialog/dialog_screen.dart';
+import 'package:online_smwu_again/Screen/image/image_screen.dart';
 import 'package:online_smwu_again/Screen/state_management/state_management_screen.dart';
 import 'package:online_smwu_again/Screen/tabbar/tab_bar_screen.dart';
+import 'package:online_smwu_again/Screen/text/text_practice_screen.dart';
+import 'package:online_smwu_again/Screen/text/text_screen.dart';
 import 'package:online_smwu_again/Screen/ui_exam.dart';
+
+import 'checkbox/Checkbox_screen.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -355,7 +359,43 @@ class ButtonScreen extends StatelessWidget {
                       },
                     ));
                   },
-                  child: Text("UI exam"))
+                  child: Text("UI exam")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ImageScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Image")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TextScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Text")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TextPracticeScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Text Practice"))
             ],
           ),
         ),
