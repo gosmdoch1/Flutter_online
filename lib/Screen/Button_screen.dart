@@ -22,6 +22,7 @@ import 'package:online_smwu_again/Screen/Stateless/Stateless_screen.dart';
 import 'package:online_smwu_again/Screen/Text_form_field/Text_form_field_screen.dart';
 import 'package:online_smwu_again/Screen/Todo/Todo_screen.dart';
 import 'package:online_smwu_again/Screen/bottom_sheet/bottom_sheet_screen.dart';
+import 'package:online_smwu_again/Screen/commerce/navigation/navigation_screen.dart';
 import 'package:online_smwu_again/Screen/default_tab_controller/default_tab_controller_screen.dart';
 import 'package:online_smwu_again/Screen/dialog/dialog_screen.dart';
 import 'package:online_smwu_again/Screen/state_management/state_management_screen.dart';
@@ -40,6 +41,17 @@ class ButtonScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              ElevatedButton(
+                  onPressed: () {
+                    // 화면 이동 Navigator
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return NavigationScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Commerce App")),
+              SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
                     // 화면 이동 Navigator
